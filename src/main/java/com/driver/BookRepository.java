@@ -12,7 +12,9 @@ public class BookRepository {
     }
 
     public Book save(Book book){
-        bookMap.put(book.getId(),book);
+        int number=bookMap.size()+1;
+        book.setId(number);
+        bookMap.put(number,book);
         return book;
     }
 
