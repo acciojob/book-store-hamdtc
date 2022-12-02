@@ -35,12 +35,12 @@ public class BookController {
 
     // get by the author name
     @GetMapping("/get-books-by-author")
-    public ResponseEntity<List<Book>> getByAuthor(@RequestParam String author){
+    public ResponseEntity<List<Book>> getBookByAuthor(@RequestParam String author){
         return new ResponseEntity<>(bookService.findBooksByAuthor(author),HttpStatus.CREATED);
     }
      // get by genre
      @GetMapping("/get-books-by-genre")
-     public ResponseEntity<List<Book>> getByGenre(@RequestParam String genre){
+     public ResponseEntity<List<Book>> getBookByGenre(@RequestParam String genre){
          return new ResponseEntity<>(bookService.findBooksByGenre(genre),HttpStatus.CREATED);
      }
 
